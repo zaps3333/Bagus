@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil & Materi Hosting</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0a0a0f, #1b1b2f);
+      color: #f5f5f5;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      color: #fff;
+      font-weight: 600;
+      text-shadow: 0 0 10px rgba(0, 183, 255, 0.7);
+      box-shadow: 0 4px 20px rgba(0, 183, 255, 0.3);
+    }
+
+    .profil-wrapper {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0, 183, 255, 0.1);
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00b4d8;
+      box-shadow: 0 0 20px rgba(0, 183, 255, 0.4);
+    }
+
+    .profile h2 {
+      margin: 15px 0 5px;
+      color: #fff;
+      font-size: 1.6rem;
+    }
+
+    .info {
+      font-size: 0.95rem;
+      color: #aaa;
+      margin-bottom: 5px;
+    }
+
+    .hobi, .cita {
+      color: #00b4d8;
+      font-style: italic;
+    }
+
+    .materi-wrapper {
+      max-width: 900px;
+      margin: 20px auto 40px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0, 183, 255, 0.1);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 25px 0;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+      box-shadow: 0 0 12px rgba(0, 183, 255, 0.4);
+      user-select: none;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 183, 255, 0.8);
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .content {
+      display: none;
+      animation: fade 0.5s ease;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #materi:checked ~ .materi,
+    #pengantar:checked ~ .pengantar {
+      display: block;
+    }
+
+    .content h3 {
+      color: #00b4d8;
+      border-left: 4px solid #00b4d8;
+      padding-left: 10px;
+      font-size: 1.4rem;
+    }
+
+    .content p, .content ul {
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .content img {
+      display: block;
+      max-width: 100%;
+      border-radius: 15px;
+      margin: 15px auto;
+      box-shadow: 0 0 20px rgba(0, 183, 255, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #999;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    ADMINISTRASI SISTEM JARINGAN XII TKJ A
+  </header>
+
+  <!-- Bagian Profil -->
+  <section class="profil-wrapper">
+    <div class="profile">
+      <img src="kucing.webp" alt="Foto Profil">
+      <h2>Bagus Sasongko Dewaji</h2>
+      <p class="info">📍 Alamat: Jl. Muamalah 1, Jagakarsa, Jakarta Selatan</p>
+      <p class="hobi">Hobi: Main Game, Mendengarkan Music</p>
+      <p class="cita">Cita-cita: Kerja di Jepang</p>
+    </div>
+  </section>
+
+  <!-- Bagian Materi -->
+  <main class="materi-wrapper">
+    <div class="buttons">
+      <!-- ⬅️ Tombol Pengantar di sebelah kiri -->
+      <label for="pengantar" class="btn">🌐 Pengantar Hosting</label>
+      <label for="materi" class="btn">📘 Rangkuman Control Panel</label>
+    </div>
+
+    <!-- Input checkbox untuk konten -->
+    <input type="checkbox" id="materi">
+    <input type="checkbox" id="pengantar">
+
+    <section class="content pengantar">
+      <h3>Pengantar Hosting</h3>
+     
+      <p>
+        <b>Hosting</b> adalah layanan untuk menyimpan file dan data website agar bisa diakses melalui internet.
+        File seperti gambar, kode, dan database disimpan di server yang selalu aktif 24 jam.
+      </p>
+       <img src="hosting.webp" alt="Pengantar Hosting">
+      <p>
+        Jenis-jenis hosting yang umum digunakan:
+      </p>
+      <ul>
+        <li><b>Shared Hosting:</b> Paling terjangkau, berbagi server dengan pengguna lain.</li>
+        <li><b>VPS Hosting:</b> Server virtual dengan sumber daya terpisah.</li>
+        <li><b>Dedicated Server:</b> Satu server penuh untuk satu pengguna.</li>
+        <li><b>Cloud Hosting:</b> Menggunakan jaringan server cloud untuk performa lebih baik.</li>
+      </ul>
+      <p>
+        Hosting adalah fondasi utama bagi website — tanpa hosting, website tidak bisa diakses oleh pengguna di seluruh dunia.
+      </p>
+    </section>
+
+    <section class="content materi">
+  <h3>Apa itu cPanel</h3>
+  <p>
+    <strong>cPanel</strong> adalah panel kontrol berbasis web untuk mengelola layanan hosting seperti file, database, domain, dan email dengan mudah. Dengan cPanel, pengguna tidak perlu menggunakan perintah Linux yang rumit untuk mengelola server, karena semuanya bisa dilakukan melalui tampilan antarmuka yang sederhana.
+  <img src="controlpanel.png" alt=".">
+
+  <h4>🔧 Fungsi Utama cPanel</h4>
+  <ul>
+    <li>Mengelola file website secara langsung</li>
+    <li>Membuat dan mengatur database (MySQL)</li>
+    <li>Mengelola akun email berbasis domain</li>
+    <li>Menambah dan mengatur domain & subdomain</li>
+    <li>Melakukan backup dan restore data</li>
+    <li>Menginstal CMS (WordPress, Joomla, dll) dengan 1 klik</li>
+  </ul>
+
+  <h4>✅ Keunggulan cPanel</h4>
+  <ul>
+    <li>Mudah digunakan dengan antarmuka grafis</li>
+    <li>Fitur sangat lengkap dan terorganisir</li>
+    <li>Didukung oleh hampir semua penyedia hosting</li>
+    <li>Proses otomatisasi menghemat waktu</li>
+    <li>Cocok untuk pemula maupun pengguna mahir</li>
+  </ul>
+
+  <h4>❌ Kekurangan cPanel</h4>
+  <ul>
+    <li>Bersifat berbayar — biaya lisensi bisa cukup mahal</li>
+    <li>Fitur terlalu banyak bisa membingungkan pemula</li>
+    <li>Memakan cukup banyak resource server</li>
+  </ul>
+
+  <h4>🧾 Kesimpulan</h4>
+  <p>
+    <strong>cPanel</strong> adalah salah satu control panel hosting paling populer dan powerful.
+    Dengan tampilan yang mudah dipahami dan fitur lengkap, cPanel sangat cocok untuk berbagai
+    kebutuhan website. Meski tidak gratis, fungsinya sepadan dengan biaya yang dikeluarkan.
+  </p>
+</section>
+
